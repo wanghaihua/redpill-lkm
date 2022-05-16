@@ -73,7 +73,7 @@ jobs:
         run: |
           mkdir ~/rp-lkm
           make LINUX_SRC=~/.toolchain/braswell-DSM-7.0-toolkit/build clean
-          make LINUX_SRC=~/.toolchain/braswell-DSM-7.0-toolkit/build CROSS_COMPILE=~/.toolchain/apollolake-DSM-7.0-toolchain/x86_64-pc-linux-gnu/bin/x86_64-pc-linux-gnu- dev-v7
+          make LINUX_SRC=~/.toolchain/braswell-DSM-7.0-toolkit/build CROSS_COMPILE=~/.toolchain/braswell-DSM-7.0-toolchain/x86_64-pc-linux-gnu/bin/x86_64-pc-linux-gnu- dev-v7
           cp redpill.ko ~/rp-lkm/redpill-linux-v3.10.108.ko
 
           make LINUX_SRC=~/.toolchain/apollolake-DSM-6.2-toolkit/build clean
