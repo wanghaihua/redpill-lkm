@@ -31,9 +31,9 @@ jobs:
       - name: Install Dependencies
         if: steps.cache-dsm-toolchains.outputs.cache-hit != 'true'
         run: |
-          mkdir -p ~/.toolchain/apollolake-DSM-7.0-toolchain
-          wget -q https://sourceforge.net/projects/dsgpl/files/Tool%20Chain/DSM%207.0.0%20Tool%20Chains/Intel%20x86%20Linux%204.4.180%20%28Apollolake%29/apollolake-gcc750_glibc226_x86_64-GPL.txz
-          wget -q https://sourceforge.net/projects/dsgpl/files/toolkit/DSM7.0/ds.apollolake-7.0.dev.txz
+          mkdir -p ~/.toolchain/braswell-DSM-7.0-toolchain
+          wget -q https://sourceforge.net/projects/dsgpl/files/Tool%20Chain/DSM%207.0.0%20Tool%20Chains/Intel%20x86%20Linux%203.10.108%20%28Braswell%29/braswell-gcc750_glibc226_x86_64-GPL.txz
+          wget -q https://sourceforge.net/projects/dsgpl/files/toolkit/DSM7.0/ds.braswell-7.0.dev.txz
           tar -xf apollolake-gcc750_glibc226_x86_64-GPL.txz -C ~/.toolchain/apollolake-DSM-7.0-toolchain
           tar -xf ds.apollolake-7.0.dev.txz -C ~/.toolchain usr/local/x86_64-pc-linux-gnu/x86_64-pc-linux-gnu/sys-root/usr/lib/modules/DSM-7.0/
           cp -rf ~/.toolchain/usr/local/x86_64-pc-linux-gnu/x86_64-pc-linux-gnu/sys-root/usr/lib/modules/DSM-7.0/ ~/.toolchain/apollolake-DSM-7.0-toolkit/
